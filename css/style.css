@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,300;16..144,400;16..144,600&display=swap');
+
+li::-moz-selection{
+	color: rgb(233, 213, 34);
+}
+li::selection{
+		color: rgb(233, 213, 34);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montagu Slab', serif;
+}
+body{
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(23, 37, 51) 0%, rgba(34,34,34,1) 90% );;
+}
+ul{
+  list-style: none;
+}
+.hands-position{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.x-center{
+  left: 50%;
+  transform: translateX(-50%);
+}
+.y-center{
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* START HOUR HOUR CIRCLES */
+.out-circle{
+  position: relative;
+  width: 315px;height: 315px;
+  border: 2px solid #181818;
+  border-radius: 50%;
+  box-shadow: 10px 10px 8px 0px;
+  caret-color: transparent;
+}
+.in-circle{
+  width: 300px;height: 300px;
+  background-image: url('../images/bkg.jpg');
+  background-size: cover;
+  background-position:center;
+  border-radius: 50%;
+  box-shadow: 0px 0px 6px 3px #6a6d18ba;
+}
+.center-circle{
+  width:25px;height: 25px;
+  border-radius: 50%;
+  background-color: #ffeb3b73;
+  box-shadow: 0px 0px 9px 3px #0d0d0d;
+}
+.small-center-circle{
+  width: 15px;height: 15px;
+  background-color: #ff9800;
+  border: 3px solid #a81212;
+  border-radius: 50%;
+  z-index: 900;
+}
+/* END HOUR CIRCLES */
+
+/* START HANDS */
+.hands{
+  position: relative;
+  width: 30px;height: 30px;
+}
+.hour-hand{
+  width: 5px;height: 90px;
+  z-index: 200;
+}
+.minute-hand{
+  width: 5px;height: 120px;
+  transform: rotate(0deg) translate(-50%,-80%);
+  z-index: 100;
+}
+.minute-hand::after , .hour-hand::after{
+  content: "";
+  position: absolute;
+  transform: translate(-2.9px,-18px);
+  border-width: 6px 6px 30px 6px;
+  border-radius: 9px;
+  border-style: solid;
+  border-color: #0000 #0000 #fdcc38  #0000;
+}
+
+.second-hand{
+  width: 2px;height: 140px;
+  background-color: rgb(177, 30, 30);
+  border-radius: 20px;
+  z-index: 300;  
+}
+.hour-hand,.minute-hand {
+  background: #F7971E;
+  background: -webkit-linear-gradient(to bottom, #ffd408, #ffc107); 
+  background: linear-gradient(to bottom, #ffd408, #ffc107);
+  box-shadow: 0px 0px 5px 2px;
+  transition:.5s;
+}
+.hour-hand,.minute-hand,.second-hand{
+  transform-origin: 0 0;
+  left: 50%;
+}
+/* END HANDS */
+
+/* START HOURS */
+ul.hours li{
+  position: absolute;
+  color: #dbaa0b;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  text-shadow: 2px 1px 8px #000;
+}
+ul.hours li:first-of-type{
+  top: 2px;
+}
+ul.hours li:nth-of-type(2){
+  top: 7%; right: 26%;
+}
+ul.hours li:nth-of-type(3){
+  top: 23%; right: 9%;
+}
+ul.hours li:nth-of-type(4){
+  right: 4px;
+}
+ul.hours li:nth-of-type(5){
+  bottom: 22%; right: 9%;
+}
+ul.hours li:nth-of-type(6){
+  bottom: 6%; right: 25%;
+}
+ul.hours li:nth-of-type(7){
+  bottom: 2px;
+}
+ul.hours li:nth-of-type(8){
+  bottom: 6%; left: 25%;
+}
+ul.hours li:nth-of-type(9){
+  bottom: 22%; left: 9%;
+}
+ul.hours li:nth-of-type(10){
+  left: 4px;
+}
+ul.hours li:nth-of-type(11){
+  top: 23%; left: 8%;
+}
+ul.hours li:last-of-type{
+  top: 7%; left: 26%;
+}
+/* END HOURS */
+
+/*START TIME TABLE*/
+.time-table{
+  display: flex;
+  width: fit-content; height: 50px;
+  border-radius: 10px;
+  margin-top: 25px;
+}
+.time-table > li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 33.33%; height: 100%; min-width: 60px;
+  caret-color: transparent;
+  color: #dbaa0b;
+  text-shadow: 2px 1px 8px #000;
+  font-size: 19px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 0 14px;
+  border: 0;
+  box-shadow: inset 0px 0px 9px 0px #000000c9;
+}
+.time-table > li:first-of-type{
+  border-radius: 20px 0px 0 0 ;
+  min-width: 80px;
+}
+.time-table > li:last-of-type{
+  border-radius: 0px 0px 20px 0px  ;
+}
+/* END TIME TABLE */

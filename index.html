@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content=" simple CSS HTM and JS clock">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Clock</title>
+</head>
+<body>
+  <section class="container">
+    <div class="out-circle">
+      <div class="in-circle center">
+        <div class="center-circle center">
+          <div class="small-center-circle center"></div>
+          <div class="hands center">
+            <div class="hour-hand hands-position" id="HH-hand"></div>
+            <div class="minute-hand hands-position" id="MM-hand"></div>
+            <div class="second-hand hands-position"  id="SS-hand"></div>
+          </div>
+        </div>
+        <ul class="hours">
+          <li class="x-center">12</li>
+          <li>1</li>
+          <li>2</li>
+          <li class="y-center">3</li>
+          <li>4</li>
+          <li>5</li>
+          <li class="x-center">6</li>
+          <li>7</li>
+          <li>8</li>
+          <li class="y-center">9</li>
+          <li>10</li>
+          <li>11</li>
+        </ul>
+      </div>
+    </div>
+
+    <ul class="time-table">
+      <li id="DD"></li>
+      <li id="HH"></li>
+      <li id="MM"></li>
+      <li id="SS"></li>
+    </ul>
+  </section>
+  <script src="js/script.js"></script>
+</body>
+</html>
